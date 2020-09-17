@@ -1,2 +1,2 @@
-# AI-algos
-All the basic Artificial Intelligence algorithms
+# DS-Algos
+All the basic algorithms
