@@ -2,7 +2,6 @@
 """
 Created on Thu Apr  1 11:02:23 2021
 
-@author: monu
 """
 
 s1 = "xyzpqrabc"
