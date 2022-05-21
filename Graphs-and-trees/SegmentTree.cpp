@@ -2,14 +2,14 @@
 
 using namespace std;
 
-void constructTree(vector<int> &arr, vector<int> &segtree, int beg, int end, int pos){
-    if(beg == end){
-        segtree[pos] = arr[beg];
+void constructTree(vector<int> &arr, vector<int> &segtree, int low, int high, int pos){
+    if(low == high){
+        segtree[pos] = arr[low];
         return;
     }
-    int mid = (beg+end)/2;
-    constructTree(arr, segtree, beg, mid, 2*pos+1);
-    constructTree(arr, segtree, mid+1, end, 2*pos+2);
+    int mid = (low+high)/2;
+    constructTree(arr, segtree, low, mid, 2*pos+1);
+    constructTree(arr, segtree, mid+1, high, 2*pos+2);
     segtree[pos] = min(segtree[2*pos+1], segtree[2*pos+2]);
 }
 
